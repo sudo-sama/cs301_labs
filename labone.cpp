@@ -82,6 +82,15 @@ public:
             temp = temp->getNext();
         }
     }
+
+    ~StackLinkedList(){
+        Node<T>* temp = nullptr;
+        while(m_head){
+            temp = m_head;
+            m_head = m_head->getNext();
+            delete temp;
+        }
+    }
 };
 
 // Asks user for input for a faculty member
